@@ -1,0 +1,58 @@
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  @keyframes birdFly {
+    0% {
+      transform: translateX(-100px) translateY(-50px) scale(0.8);
+    }
+    50% {
+      transform: translateX(200px) translateY(-200px) scale(1.2);
+    }
+    100% {
+      transform: translateX(500px) translateY(-50px) scale(0.8);
+    }
+  }
+  
+  .bird {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('bird.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: birdFly 4s linear infinite;
+    z-index: 0;
+    display: none;
+  }
+  
+  .message {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+  }
+  
